@@ -1,0 +1,17 @@
+{{#each comment}}
+<div class="card" style="width: 20rem;">
+  <div class="card-body">
+    <h4 class="card-title">{{author_name}}</h4>
+    <h6 class="card-subtitle mb-2 text-muted">{{creation_time}}<br></h6>
+    <p class="card-text">{{body}}</p>
+  </div>
+</div>
+<form class"form" action="/comment/{{id}}?_method=DELETE" method="post">
+  <a href="/comment/{{id}}/edit" type="button" class="btn btn-default btn-warning">
+    Edit
+  </a>
+  <button type="submit" class="btn btn-default btn-danger">
+    Delete
+  </button>
+</form>
+{{/each}}
